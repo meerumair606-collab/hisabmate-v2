@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#116149"><title>HisabMate | Simple money management</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar" id="sidebar">
+ <a class="brand" href="#"><span class="logo">H</span><span>HisabMate<small>PERSONAL FINANCE</small></span></a>
+ <div class="nav-caption">MENU</div>
+ <nav>
+  <button class="nav-item active" data-page="home"><b>⌂</b>Dashboard</button>
+  <button class="nav-item" data-page="transactions"><b>⇄</b>Transactions</button>
+  <button class="nav-item" data-page="budgets"><b>▤</b>My budgets</button>
+  <button class="nav-item" data-page="goals"><b>◎</b>Savings goals</button>
+  <button class="nav-item" data-page="bills"><b>▣</b>Bills & reminders</button>
+  <button class="nav-item" data-page="reports"><b>▥</b>Reports</button>
+ </nav>
+ <div class="sidebar-bottom">
+  <div class="tip"><span>✦</span><strong>A little saving today</strong><p>can make tomorrow easier.</p></div>
+  <button class="nav-item" data-page="settings"><b>⚙</b>Settings</button>
+  <div class="user"><div class="user-avatar">U</div><div><strong>My account</strong><small>Personal workspace</small></div></div>
+ </div>
+</aside>
+<main class="main">
+ <header class="topbar"><button id="menuToggle" class="menu-toggle">☰</button><div class="crumb">My workspace <span>/</span> <strong id="crumb">Dashboard</strong></div><div class="top-right"><span id="dateText"></span><button class="button primary small" id="topAdd">＋ Add transaction</button></div></header>
+ <section id="content" class="content"></section>
+ <footer>HisabMate <span>•</span> Simple money management <span class="foot-note">Your data is saved in this browser</span></footer>
+</main>
+</div>
+<div class="overlay" id="overlay" hidden><section class="dialog">
+ <div class="dialog-head"><div><div class="overline">QUICK ENTRY</div><h2 id="dialogTitle">Add transaction</h2></div><button class="x" id="xClose">×</button></div>
+ <form id="entryForm">
+  <div class="fields" id="formFields"></div>
+  <div class="dialog-actions"><button type="button" class="button light" id="cancel">Cancel</button><button class="button primary" type="submit">Save</button></div>
+ </form>
+</section></div>
+<div class="toast" id="toast"></div>
+<script src="app.js"></script>
+</body></html>
